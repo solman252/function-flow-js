@@ -1,6 +1,6 @@
 # JavaScript Functions Workshop
 
-This is a JavaScript functions workshop designed for Nayland College students and first-year NMIT Digital Technlogy students. It includes interactive coding exercises, peer programming, visualizations, and automated feedback — using only JavaScript.
+This is a JavaScript functions workshop designed for Nayland College students and first-year NMIT Digital Technology students. It includes interactive coding exercises, peer programming, visualizations, and automated feedback — using only JavaScript.
 
 ## Learning Goals
 
@@ -29,16 +29,26 @@ By the end of this workshop, students will be able to:
 └── README.md          # Full learning guide and instructions
 ```
 
-
 ## Peer Coding Instructions
 
-We use the Driver–Navigator model to promote active collaboration.
+This workshop encourages collaboration using the Driver–Navigator method:
 
-### Roles:
-- **Driver**: Types the code, runs tests, navigates files
-- **Navigator**: Guides the logic, checks the instructions, and reviews the Driver's work
+- **Driver**: Types the code and runs it
+- **Navigator**: Reads the instructions, guides the logic, and helps debug
+- Switch roles every 10–15 minutes
 
-Switch roles every 10 to 15 minutes.
+### For Pairs Using GitHub:
+
+- One student in each pair should **fork this repository**
+- Then go to their fork’s **Settings → Manage access**
+- Add their partner as a **collaborator** using GitHub username or email
+- Both students can now pull, push, and commit code in the same fork
+
+> Tip: If you're coding remotely, use screen sharing or VS Code Live Share to collaborate in real time
+
+## Working with a Partner?
+
+See [PEER_CODING.md](./PEER_CODING.md) for instructions on forking, inviting collaborators, and using the Driver–Navigator method.
 
 ## Activity Overview
 
@@ -46,18 +56,16 @@ Each `.js` file in the `starter/` folder contains a function name and comments w
 
 You will use JavaScript to complete each exercise based on real-world logic involving objects, arrays, and workflows.
 
-| File                    | Topic                         | Key Concepts                     |
-|-------------------------|-------------------------------|----------------------------------|
-| 01_basics.js            | Object Properties              | Declaring and accessing objects  |
-| 02_parameters.js        | Summing Values                 | Function parameters and loops    |
-| 03_scope.js             | Variable Scope                 | Global vs Local variables        |
-| 04_callbacks.js         | Discount Calculation           | Higher-order functions, callbacks|
-| 05_animation.js         | Console Rocket                 | Loops, string manipulation       |
-| 06_workflow_console.js  | Shopping Cart Steps            | setTimeout, step iteration       |
-| 07_workflow_canvas.js   | Browser Visualization (Canvas) | Canvas API, animation steps      |
-| 08_hoisting.js          | Hoisting Demonstration         | Execution order, var vs let      |
-
-
+| File                   | Topic                          | Key Concepts                      |
+| ---------------------- | ------------------------------ | --------------------------------- |
+| 01_basics.js           | Object Properties              | Declaring and accessing objects   |
+| 02_parameters.js       | Summing Values                 | Function parameters and loops     |
+| 03_scope.js            | Variable Scope                 | Global vs Local variables         |
+| 04_callbacks.js        | Discount Calculation           | Higher-order functions, callbacks |
+| 05_animation.js        | Console Rocket                 | Loops, string manipulation        |
+| 06_workflow_console.js | Shopping Cart Steps            | setTimeout, step iteration        |
+| 07_workflow_canvas.js  | Browser Visualization (Canvas) | Canvas API, animation steps       |
+| 08_hoisting.js         | Hoisting Demonstration         | Execution order, var vs let       |
 
 ## Instructions for Starter Files
 
@@ -72,6 +80,7 @@ Each file in the `starter/` folder:
 > In `starter/02_parameters.js`, you must write a function that takes an array of numbers and returns their total. You are expected to create the loop, accumulate the sum, and return the result.
 
 You can test your work anytime using:
+
 ```bash
 npm test
 ```
@@ -84,20 +93,43 @@ Make sure you have the following installed:
 - A modern code editor (such as Visual Studio Code)
 - A browser (for canvas-based exercises)
 
-## Setup Instructions
+## Getting Started: Fork This Repository
 
-### 1. Clone this Repository
-```bash
-git clone https://github.com/your-username/function-flow-js.git
-cd function-flow-js
-```
+Each student should **fork** this repository to create their own copy on GitHub.
+
+### Steps:
+
+1. Click the **“Fork”** button at the top right of this page.
+2. Open your terminal and clone your fork:
+   ```bash
+   git clone https://github.com/your-username/function-flow-js.git
+   cd function-flow-js
+   ```
 
 ### 2. Install Dependencies
+
 ```bash
 npm install
 ```
 
+## Testing Your Code
+
+This project uses **Jest** and **GitHub Actions** to automatically test your code and provide feedback.
+
+### Recommended Workflow
+
+Before running automated tests, it's highly recommended that you run your code **manually** to understand its behavior.
+
+#### Step-by-Step
+
+1. **Write your code** in the appropriate file inside the `starter/` folder.
+2. **Run your code manually** using Node.js to check output and debug:
+   ```bash
+   node starter/filename.js
+   ```
+
 ### 3. Run the Tests
+
 ```bash
 npm test
 ```
@@ -112,7 +144,6 @@ Tests will provide instant feedback for each activity. Only complete one activit
 
 > Note: You do not need access to the `completed/` folder to complete this workshop. Simply write your code in the `starter/` files, run the tests, and improve your solution based on the feedback.
 
-
 ## Continuous Integration (CI)
 
 GitHub Actions will automatically:
@@ -123,7 +154,6 @@ GitHub Actions will automatically:
 
 This ensures consistency and fairness in assessment.
 
-
 ## Best Practices
 
 - Start with `01_basics.js` and move through the activities in order.
@@ -131,7 +161,6 @@ This ensures consistency and fairness in assessment.
 - After completing each activity, run `npm test` to verify your solution.
 - Make at least three attempts before referring to any solution.
 - Discuss your approach with peers before requesting hints or help.
-
 
 ## Need Help?
 
@@ -145,10 +174,10 @@ If you're stuck or unsure:
 
 Remember: making mistakes is part of the learning process.
 
-
 ## Troubleshooting
 
 ### I ran `npm test` but got an error
+
 - Make sure you're in the project directory
 - Try deleting `node_modules` and reinstalling:
   ```bash
@@ -157,11 +186,13 @@ Remember: making mistakes is part of the learning process.
   ```
 
 ### A test failed but I think my code is correct
+
 - Double-check that your function is exported correctly using `module.exports`
 - Review the function name and parameters
 - Run the file manually using `node starter/filename.js` to debug
 
 ### I can't see the `completed/` folder
+
 - That is intentional. It's used only in the CI system and hidden from student view
 
 ## License
@@ -169,4 +200,3 @@ Remember: making mistakes is part of the learning process.
 This project is licensed under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).
 
 You are free to use, modify, and distribute this material for educational and non-commercial purposes, provided proper attribution is given.
-
