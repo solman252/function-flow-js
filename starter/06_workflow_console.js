@@ -11,6 +11,18 @@ const steps = [
 
 function animateSteps() {
   // Your code here
+  // For each element:
+  for (let index = 0; index < steps.length; index++) {
+    const step = steps[index];
+    // Do in [index] seconds:
+    setTimeout(() => {
+      // Log the step
+      console.log(step)
+    },1000*index)
+  }
 }
+
+// Run code
+animateSteps()
 
 module.exports = { animateSteps };
