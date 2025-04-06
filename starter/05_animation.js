@@ -16,5 +16,10 @@ for (let i = 0; i < 20; i++) {
     move(1)
   }, 500*i);
 }
+for (let i = 0; i < 20; i++) {
+  setTimeout(() => {
+    move(-1)
+  }, 500*(i+20));
+}
 
 module.exports = { move };
