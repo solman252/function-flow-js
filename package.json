@@ -1,0 +1,24 @@
+{
+  "name": "function-flow",
+  "version": "1.0.0",
+  "description": "A JavaScript functions workshop designed for high school and first-year IT/BIT students. Features interactive console-based activities, peer coding challenges, animated function flow visualizations, and clear examples of hoisting — all using pure JavaScript.",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alikahwaji/function-flow-js.git"
+  },
+  "keywords": [],
+  "author": "Ali Kahwaji",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alikahwaji/function-flow-js/issues"
+  },
+  "homepage": "https://github.com/alikahwaji/function-flow-js#readme",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}

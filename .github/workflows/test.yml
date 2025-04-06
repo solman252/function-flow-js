@@ -1,0 +1,37 @@
+name: Run JS Function Tests
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout code from the main branch (starter/, tests/, etc.)
+      - name: Checkout main branch
+        uses: actions/checkout@v4
+
+      # Fetch the completed/ folder from the solutions branch (used for testing)
+      - name: Fetch completed solutions from solutions branch
+        run: |
+          git fetch origin solutions
+          git checkout origin/solutions -- completed
+
+      # Setup Node.js environment
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      # Install dependencies (Jest)
+      - name: Install dependencies
+        run: npm install
+
+      # Run all tests
+      - name: Run tests with Jest
+        run: npm test
